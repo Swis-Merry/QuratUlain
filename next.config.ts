@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [{ protocol: "https", hostname: "drehomes.com", pathname: "/admin_nsrdwsc/assets/media/**" }],
   },
   async headers() {
     return [

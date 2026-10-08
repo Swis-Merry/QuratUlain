@@ -26,6 +26,7 @@ export const nav = [
   { label: "Journey", href: "#journey" },
   { label: "Awards", href: "#awards" },
   { label: "DRE Homes", href: "#dre-homes" },
+  { label: "Projects", href: "#projects" },
   { label: "Press", href: "#press" },
   { label: "Philosophy", href: "#philosophy" },
   { label: "Gallery", href: "#gallery" },

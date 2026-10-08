@@ -43,6 +43,14 @@ All copy and data live in `src/content/` — no component changes required.
 | `story.ts` | Journey timeline, verified quotations, leadership philosophy, gallery images |
 | `sources.ts` | Every source URL referenced on the site |
 
+### Featured projects (live from drehomes.com)
+
+The **Featured Projects** section pulls the off-plan project cards from the drehomes.com homepage
+(`src/lib/dre-projects.ts`). The page is regenerated at most once a day (ISR, `revalidate: 86400`), so new projects,
+prices and images appear automatically. If drehomes.com is unreachable or its markup changes, the site falls back to
+`src/content/projects-snapshot.ts` — refresh that snapshot occasionally. Project images are served from
+`drehomes.com/admin_nsrdwsc/assets/media/**` through the Next.js image optimiser (see `next.config.ts`).
+
 Images go in `public/images/`. For gallery items set `focus` (CSS `object-position`) to keep faces in frame.
 Only add **verified** facts and quotations — each award, milestone and quote must reference a URL in `sources.ts`.
 

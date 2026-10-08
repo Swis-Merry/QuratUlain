@@ -33,11 +33,11 @@ export function Header() {
       }`}
     >
       <div className="container-luxe flex h-18 items-center justify-between py-4">
-        <Link href="/" className="font-serif text-2xl tracking-wide text-charcoal" aria-label="Qurat Ul Ain — home">
+        <Link href="/" className="font-serif text-2xl tracking-wide whitespace-nowrap text-charcoal" aria-label="Qurat Ul Ain — home">
           Qurat <span className="italic text-champagne-dark">Ul</span> Ain
         </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
+        <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-8">
             {nav.map((item) => (
               <li key={item.href}>
@@ -61,7 +61,7 @@ export function Header() {
           </a>
           <button
             type="button"
-            className="relative h-10 w-10 lg:hidden"
+            className="relative h-10 w-10 xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -81,7 +81,7 @@ export function Header() {
         id="mobile-nav"
         aria-label="Mobile"
         hidden={!open}
-        className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-charcoal/10 bg-ivory lg:hidden"
+        className="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-charcoal/10 bg-ivory xl:hidden"
       >
         <ul className="container-luxe flex flex-col gap-1 py-8">
           {[...nav, { label: "Connect", href: "#connect" }].map((item) => (
